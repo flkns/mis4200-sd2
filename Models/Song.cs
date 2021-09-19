@@ -28,6 +28,6 @@ namespace mis4200_sd2.Models
 
         public virtual Album album { get; set; }
 
-        public IEnumerable<Artist> artists { get; set; }
+        public ICollection<Artist> artists { get; set; }
     }
 }

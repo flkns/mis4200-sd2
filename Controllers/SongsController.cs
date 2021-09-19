@@ -18,7 +18,8 @@ namespace mis4200_sd2.Controllers
         // GET: Songs
         public ActionResult Index()
         {
-            return View(db.Songs.ToList());
+            var songs = db.Songs.Include(o => o.album);
+            return View(songs.ToList());
         }
 
         // GET: Songs/Details/5

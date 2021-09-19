@@ -24,7 +24,7 @@
             @Html.DisplayNameFor(model => model.songGenre)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.album)
+            @Html.DisplayNameFor(model => model.artists)
         </th>
         <th></th>
     </tr>
@@ -44,7 +44,7 @@
             @Html.DisplayFor(modelItem => item.songGenre)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.album)
+            @Html.DisplayFor(modelItem => item.artists)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.songID }) |

@@ -18,7 +18,7 @@ namespace mis4200_sd2.Controllers
         // GET: Songs
         public ActionResult Index()
         {
-            var songs = db.Songs.Include(o => o.album);
+            var songs = db.Songs.Include(o => o.artists);
             return View(songs.ToList());
         }
 
@@ -56,7 +56,7 @@ namespace mis4200_sd2.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.albumID = new SelectList(db.Albums, "albumID", "albumName", song.album);
+            ViewBag.artists = new SelectList(db.Artists, "artistID", "artistName", song.artists);
             return View(song);
         }
 

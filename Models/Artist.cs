@@ -17,6 +17,6 @@ namespace mis4200_sd2.Models
         [StringLength(50)]
         public string artistName { get; set; }
 
-        public ICollection<Album> artistAlbums { get; set; }
+        public IEnumerable<Album> artistAlbums { get; set; }
     }
 }

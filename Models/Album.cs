@@ -25,7 +25,7 @@ namespace mis4200_sd2.Models
         [DataType(DataType.Url)]
         public string albumArtURL { get; set; }
 
-        public ICollection<Song> albumSongs { get; set; }
+        public IEnumerable<Song> albumSongs { get; set; }
 
         public virtual Artist artist { get; set; }
 

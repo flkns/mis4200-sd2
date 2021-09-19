@@ -56,7 +56,7 @@ namespace mis4200_sd2.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.artists = new SelectList(db.Artists, "artistID", "artistName", song.artists);
+            ViewBag.artistID = new SelectList(db.Artists, "artistID", "artistName", song.artists);
             return View(song);
         }
 

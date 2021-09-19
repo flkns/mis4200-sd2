@@ -18,9 +18,7 @@ namespace mis4200_sd2.Models
         [StringLength(50)]
         public string songName { get; set; }
 
-        [DataType(DataType.Time)]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:H:mm}")]
-        public DateTime songLength { get; set; }
+        public int songLength { get; set; }
 
         [StringLength(50)]
         public string songWriter { get; set; }

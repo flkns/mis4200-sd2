@@ -1,0 +1,51 @@
+﻿@model IEnumerable<mis4200_sd2.Models.Song>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.songName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.songLength)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.songWriter)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.songGenre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.songName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.songLength)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.songWriter)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.songGenre)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.songID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.songID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.songID })
+        </td>
+    </tr>
+}
+
+</table>

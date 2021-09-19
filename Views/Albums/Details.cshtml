@@ -1,0 +1,50 @@
+﻿@model mis4200_sd2.Models.Album
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Album</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.albumName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.albumName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.recordedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.recordedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.releasedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.releasedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.albumArtURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.albumArtURL)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.albumID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
